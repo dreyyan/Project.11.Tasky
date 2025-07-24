@@ -1,10 +1,3 @@
-# Create a program using lists/tuples/dictionaries/sets (whichever
-# is applicable) to generate and manage a simple task list where
-# users can add, remove, or mark tasks as completed.
-# Write your codes and provide screenshots of the outputs.
-# Save your work as pdf with the ff file naming convention:
-# LastName_FirstName_WEEK3
-
 ''' IMPORTS '''
 import spacy, time
 
