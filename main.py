@@ -43,6 +43,7 @@ def display_list():
 def exit_tasky():
     tasky_response("See you next time!")
     time.sleep(1)
+    exit(0)
 
 # FUNCTION: Process user's command using Natural Language Processing(NLP)
 def process_command(user_command):
@@ -91,11 +92,11 @@ def process_command(user_command):
             tasky_response("I'm sorry, but that task does not exist...")
 
     # Display task list
-    elif any("display" or "show" in token.lemma_ for token in doc):
+    elif any(token.lemma_ in ("display", "show") for token in doc):
         display_list()
 
     # Exit the program
-    elif any(token.lemma_ == "exit" for token in doc):
+    elif any(token.lemma_ in ("exit", "bye") for token in doc):
         exit_tasky()
 
     # Unrecognized command
